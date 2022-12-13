@@ -1,0 +1,34 @@
+<div class="card border-dark mb-3">
+    <div class="card-header">
+      <h5>Productos<div class="text-end">
+        <button type="button" class="btn btn-primary">
+          Crear Nuevo Producto
+        </button>
+      </div></h5>
+    </div>
+    <body class="d-flex h-100 text-center text-bg-dark">
+      <div class="card-body text-primary">
+        <h5 class="card-title">Listado de Productos</h5>
+        <table class="table table-bordered table-striped table-dark">
+          <thead>
+            <tr>
+              <th>Codigo</th>
+              <th>Nombre</th>
+              <th>Marca</th>
+              <th>Precio</th>
+              <th>Fecha</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let Productos of productos">
+              <td>{{ Productos.codigo }}</td>
+              <td>{{ Productos.nombre }}</td>
+              <td>{{ Productos.marca }}</td>
+              <td>{{ Productos.precio }}</td>
+              <td>{{ Productos.createAt }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </body>
+  </div>

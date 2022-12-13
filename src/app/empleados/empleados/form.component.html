@@ -1,0 +1,64 @@
+<div class="container">
+<div class="card bg-dark text-white">
+  <div class="card-header">Formulario del Empleado</div>
+  <div class="card-body">
+    <form>
+      <div class="from-group row">
+        <label for="" class="col-form col-sm-2">Nombre</label>
+        <div class="col-sm-6">
+          <input
+            type="text"
+            class="form-control"
+            name="nombre"
+            [(ngModel)]="empleados.nombre"/>
+        </div>
+      </div>
+      <div class="from-group row">
+        <label for="" class="col-form col-sm-2">Apellidos</label>
+        <div class="col-sm-6">
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="empleados.apellido"
+            name="apellidos"/>
+        </div>
+      </div>
+
+      <div class="from-group row">
+        <label for="" class="col-form col-sm-2">Email</label>
+        <div class="col-sm-6">
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="empleados.email"
+            name="email"/>
+        </div>
+      </div>
+      <div class="from-group row">
+        <label for="" class="col-form col-sm-2">Cargo</label>
+        <div class="col-sm-6">
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="empleados.cargo"
+            name="email"/>
+        </div>
+      </div>
+    
+      <div class="from-group row">
+        <div class="col-sm-6">
+            <button class="btn btn-success" role="button" (click)="create()"
+            *ngIf="!empleados.id; else elseBlock">Crear</button>
+
+            <ng-template #elseBlock>
+              <button class="btn btn-success" role="button" (click)="update()">
+                Actualizar
+              </button>
+            </ng-template>
+        </div>
+      </div>
+      
+    </form>
+  </div>
+</div>
+</div>
